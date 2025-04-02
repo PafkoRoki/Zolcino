@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Żółcino Development Land</title>
+	<link rel="shortcut icon" href="icons/blmzduzy.png">
+	
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+	
+    <link rel="stylesheet" href="style.css">
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" >
+	
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-icons/siimple-icons.css">
+   
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+    </script>	
+</head>
+
+
+<body>
+
+  <div id="loader">
+	<img src="images/preloader.gif" alt="Loading..." id="loading-gif">
+  </div>
+
+<div id="content">
+
+
+
+    <header>
+        <h2>ŻÓŁCINO DEVELOPMENT LAND</h2>
+    </header>
+
+			
+	
+
+
+											
+
+	<div class="overlay-container">
+        <!-- Zdjęcie roweru -->
+        <img src="maps/map.png" alt="Zdjęcie roweru" class="bike-image" />
+		<img src="bike/pack3.svg" alt="Dziadówa" class="svg-overlay" id="svgButton" />
+		<img src="bike/pack2.svg" alt="Przód" class="svg-overlay" id="svgButton" />
+        <img src="bike/pack1.svg" alt="Mała" class="svg-overlay" id="svgButton" />
+    </div>
+
+
+	
+
+
+<footer class="footer">
+	<p>© 2025 Lagoon Group, All rights reserved | <button onclick="toggleBar()">Credits</button></p>
+</footer>
+
+
+    <div class="slide-up-bar" id="slideUpBar">
+		<div class="credits">
+			<p>Technologies</p>
+			<a href="https://swiperjs.com/" target="_blank">Swiper.Js</a>, <a href="https://leafletjs.com/" target="_blank">Leaflet.Js</a>
+		</div>
+		  
+		<div class="credits">	
+			<p>Fonts</p>
+			<a style="font-family: 'Montserrat', sans-serif;" href="https://fonts.google.com/specimen/Montserrat" target="_blank">Montserrat</a>
+		</div>
+		  
+		<div class="credits">
+			<p>Designed and Developed By</p>
+			<a href="">Paweł Rokicki</a>
+		</div>
+		
+		<div class="credits">  
+		 <img " src="icons/Lagoongroup.png" alt="Lagoon Group">
+		</div>
+		
+		<div class="credits">  
+			<button onclick="toggleBar()"><i class="si-x-circle"></i></button>
+		</div>
+    </div>
+
+	
+
+</div>
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/2.0.0/gpx.min.js"></script>
+
+<script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chart.js/3.7.0/chart.min.js"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+
+<script src="script.js"></script>
+
+</html>
+

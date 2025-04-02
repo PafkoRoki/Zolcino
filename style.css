@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+}
+
+body {
+      font-family: Poppins;
+			background: url('image/vis10.jpg') no-repeat center center/cover;
+			color: var(--primary-color);
+			text-align: center;
+			overflow-x: hidden;
+			background-size: cover;
+			background-position: center;
+			animation: gradientShift 6s ease-in-out infinite;
+			background-attachment: fixed;
+}
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            filter: blur(5px);
+			z-index: -1000;
+			
+        }
+ 
+
+
+header{
+    align-items: center;
+    z-index: 100;
+    color:#ffffff;
+    position: absolute;
+    top: 0;
+    max-height:150px;
+    width: 100%;
+    padding: 5px;
+}
+
+header img {
+    width: 61.8%;
+	min-width: 350px;
+    height: auto;
+
+}
+
+a:link
+{
+   color: #30404d;
+   text-decoration: none;
+}
+
+a:visited
+{
+   color: #30404d
+}
+
+a:hover
+{
+   color: #30404d
+}
+
+a:active
+{
+   color: #30404d
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.content {
+	display: none;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.footer {
+  display: flex;
+  align-items: left;
+  padding: 5px;
+  background-color: #324b4c;
+  color: #f0f0f0;
+	position: fixed;
+  bottom: 0;
+	z-index: 1000;
+	align-items: center;
+	padding: 20px 20px 20px 20px;
+	width: 100%;
+	opacity: 0.86;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.footer button{
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+	text-decoration: underline;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+        .slide-up-bar {
+            position: fixed;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			gap: 25px;
+			align-items: center;
+			flex-wrap: wrap;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: #324b4c;
+            color: #f0f0f0;
+            padding: 50px 0px 50px 0px;
+            text-align: left;
+            transition: bottom 0.3s;
+			z-index: 1000;
+			justify-content: space-around;
+			
+        }
+        .slide-up-bar.show {
+            bottom: 0;
+			background: #324b4c;
+			box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+		
+        .credits {
+			align-items: center;
+			width: 300px;
+        }
+		
+		.credits p{
+			font-weight: normal;
+			font-size: 15px;
+			text-transform: uppercase;	
+        }
+		
+        .credits a:link{
+			color: #f0f0f0;
+			text-decoration: underline;
+			font-size: 25px;
+			font-weight: bold;
+        }	
+		
+        .credits a:visited{
+			color: #f0f0f0;
+			text-decoration: underline;
+			font-size: 30px;
+        }	
+		
+		 .credits button{
+			text-align: right;
+			background: none;
+			border: none;
+			color: #f0f0f0;
+			cursor: pointer;
+			font-size: 50px;			
+        }	
+		
+		.credits img {
+			height: 50px;
+			width: auto;
+		}
+		
+/*----------------------------------------------------------------------------*/
+
+.overlay-container {
+  width: 80%;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute; /* lub fixed jeśli chcesz, aby było zawsze na środku ekranu */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+        /* Obraz roweru */
+        .bike-image {
+            width: 100%; /* Dopasowanie obrazu roweru do kontenera */
+            height: auto;
+            display: block;
+        }
+
+        /* SVG jako nakładka */
+        .svg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        /* Powiększenie i podświetlenie na hover */
+        .svg-overlay:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        /* Efekt kliknięcia */
+        .svg-overlay:active {
+            transform: scale(1.2);
+            filter: brightness(1.4);
+        }
+
+/*----------------------------------------------------------------------------*/
+
+/* Styl dla ekranu ładowania */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 252, 253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+}
+#loading-gif {
+  position: fixed;
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+/*----------------------------------------------------------------------------*/
+		
