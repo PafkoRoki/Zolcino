@@ -20,16 +20,15 @@ body {
 			background-attachment: fixed;
 }
 
-        .background {
-            position: absolute;
-            width: 100%;
-            height: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            filter: blur(5px);
-			z-index: -1000;
-			
-        }
+.background {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    filter: blur(5px);
+    z-index: -10; /* Keep it behind the content but visible */
+}
  
 
 
@@ -180,19 +179,19 @@ hr{
 /*----------------------------------------------------------------------------*/
 
 .overlay-container {
-  width: 80%;
+  width: 90%;
   font-size: 20px;
   font-weight: bold;
   position: absolute; /* lub fixed jeśli chcesz, aby było zawsze na środku ekranu */
   top: 50%;
-  left: 50%;
+  left: 35%;
   transform: translate(-50%, -50%);
   border-radius: 8px;
 }
 
         /* Obraz roweru */
         .map {
-            width: 100%; /* Dopasowanie obrazu roweru do kontenera */
+            width: 100%;
             height: auto;
             display: block;
         }
@@ -202,7 +201,8 @@ hr{
             position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
+            width: 100%;
+            height: auto;
             cursor: pointer;
             transition: transform 0.3s ease, filter 0.3s ease;
         }
@@ -243,12 +243,63 @@ hr{
 /*----------------------------------------------------------------------------*/
 svg {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
+/* SVG path styles */
 path {
-    transition: fill 0.3s;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
-path:hover {
-    fill: red !important;
+
+path:hover, path:focus {
+    fill: rgb(255, 145, 0);
+    outline: none;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Modal container */
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Right half of the screen */
+    height: 80%; /* Full height */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with 0.9 opacity */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow on the left side */
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    margin-top: 5%;
+    text-align: left;
+}
+
+/* Show the modal when active */
+#modal.active {
+    display: block;
+}
+
+/* Modal close button */
+#close-modal {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Close button on the left side */
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal content */
+#modal-content {
+    margin-top: 50px; /* Space below the close button */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#modal-content h3 {
+    line-height: 6;
+}
+
+#modal-content p {
+    line-height: 3;
 }
