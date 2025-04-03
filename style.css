@@ -191,32 +191,20 @@ hr{
 }
 
         /* Obraz roweru */
-        .bike-image {
+        .map {
             width: 100%; /* Dopasowanie obrazu roweru do kontenera */
             height: auto;
             display: block;
         }
 
         /* SVG jako nakładka */
-        .svg-overlay {
+        .svg-map {
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
             cursor: pointer;
             transition: transform 0.3s ease, filter 0.3s ease;
-        }
-
-        /* Powiększenie i podświetlenie na hover */
-        .svg-overlay:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
-        }
-
-        /* Efekt kliknięcia */
-        .svg-overlay:active {
-            transform: scale(1.2);
-            filter: brightness(1.4);
         }
 
 /*----------------------------------------------------------------------------*/
@@ -248,4 +236,14 @@ hr{
 }
 
 /*----------------------------------------------------------------------------*/
-		
+svg {
+    width: 100%;
+    height: auto;
+}
+path {
+    transition: fill 0.3s;
+    cursor: pointer;
+}
+path:hover {
+    fill: red !important;
+}
