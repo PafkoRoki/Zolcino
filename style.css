@@ -261,8 +261,8 @@ path:hover, path:focus {
 #modal {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 50%; /* Right half of the screen */
+    right: 10%;
+    width: 40%; /* Right half of the screen */
     height: 80%; /* Full height */
     background-color: rgba(255, 255, 255, 0.9); /* White background with 0.9 opacity */
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow on the left side */
