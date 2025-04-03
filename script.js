@@ -53,8 +53,21 @@ var map = L.map('map', {
 		
 //------------------------------------------------------------------------------------------------------------	
 	
-document.querySelectorAll('path').forEach(path => {
-	path.addEventListener('click', function() {
-		alert('Kliknięto na element!');
+document.querySelectorAll('.interactive').forEach(path => {
+	path.addEventListener('mouseover', () => {
+		path.style.stroke = 'red';
+		path.style.transform = 'scale(1.2)'; // Powiększenie
+	});
+
+	path.addEventListener('mouseout', () => {
+		path.style.stroke = 'black';
+		path.style.transform = 'scale(1)'; // Powrót do normalnego rozmiaru
+	});
+
+	path.addEventListener('click', () => {
+		path.style.stroke = 'blue';
+		path.style.fill = 'rgba(0, 0, 255, 0.3)';
+		path.style.transform = 'scale(1.5)'; // Jeszcze większe powiększenie po kliknięciu
+		alert("Kliknięto na ścieżkę!");
 	});
 });

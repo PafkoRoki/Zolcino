@@ -207,6 +207,11 @@ hr{
             transition: transform 0.3s ease, filter 0.3s ease;
         }
 
+    .interactive {
+        cursor: pointer;
+        transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
 /*----------------------------------------------------------------------------*/
 
 /* Styl dla ekranu ładowania */
