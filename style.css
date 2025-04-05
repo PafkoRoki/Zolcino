@@ -1,9 +1,4 @@
 
-@font-face {
-    font-family: 'Montserrat';
-    src: url('fonts/Montserrat.ttf') format('truetype');
-}
-
 
 * {
 			margin: 0;
@@ -12,7 +7,7 @@
 }
 
 body {
-      font-family: Montserrat;
+            font-family: 'Poppins';
 			background: url('image/vis10.jpg') no-repeat center center/cover;
 			text-align: center;
 			overflow-x: hidden;
@@ -35,16 +30,27 @@ body {
 
 
 header{
-    align-items: center;
-    z-index: 100;
-    color:#ffffff;
-    position: absolute;
-    top: 10px;
-    max-height:200px;
-    width: 100%;
-    padding: 15px;
-    text-shadow: 2px 2px 10px #324b4c;
-    font-size: 4vh;
+    background: linear-gradient(to right, #c4c7cc, #96b4cf); 
+    color: white; 
+    text-align: center; 
+    padding: 15px 0; 
+    font-size: 36px; 
+    font-weight: 700; 
+    letter-spacing: 2px;
+}
+
+header p{
+    padding: 0px 0; 
+    font-size: 12px; 
+    font-weight: 700; 
+    letter-spacing: 2px;
+}
+
+header b{
+    padding: 0px 0; 
+    font-size: 16px; 
+    font-weight: 700; 
+    letter-spacing: 2px;
 }
 
 a:link
@@ -170,16 +176,14 @@ a:active
 		
 /*----------------------------------------------------------------------------*/
 
-.overlay-container {
-  width: 90%;
-  font-size: 20px;
-  font-weight: bold;
-  position: absolute; /* lub fixed jeśli chcesz, aby było zawsze na środku ekranu */
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
+.container {
+    width: 90%;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;     
 }
+
 
         /* Obraz roweru */
         .map {
@@ -324,5 +328,25 @@ path:hover, path:focus {
     padding: 8px 10px; /* Add spacing inside cells */
     vertical-align: top; /* Align text to the top */
   }
-  
-  
+ 
+/*----------------------------------------------------------------------------*/ 
+
+.sketchfab {
+	align-items: center;
+	max-width: 1260px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden; /* Ukrycie nadmiaru */
+    position: relative; /* Pozycjonowanie dla elementów wewnętrznych */
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 100px;
+	
+	/* Tworzenie proporcji 16:9 (lub innej) */
+    aspect-ratio: 16 / 10; /* Automatyczna wysokość według szerokości */
+}
+
+.sketchfab iframe {
+    width: 100%; /* Dostosowanie szerokości do kafelka */
+    height: 100%;; /* Ustalona wysokość (możesz dostosować w razie potrzeby) */
+}
